@@ -4,7 +4,7 @@
     <main class="main-content main-content-bg mt-0">
         <div class="page-header min-vh-100"
             style="background-image: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80');">
-            <span class="mask bg-gradient-dark opacity-6"></span>
+            <span class="mask opacity-6"></span>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-7">
@@ -29,7 +29,7 @@
                                         <label class="form-check-label" for="rememberMe">Remember me</label>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary w-100 my-4 mb-2 gold_bg">Sign in</button>
+                                        <button type="submit" class="btn btn-primary w-100 my-4 mb-2 bg-gradient-dark">Sign in</button>
                                     </div>                                                                        
                                 </form>
                             </div>

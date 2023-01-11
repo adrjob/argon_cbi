@@ -24,8 +24,7 @@
 
     <style>
         .gold_bg {
-            background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
-	background: linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
+            background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
         }
         .bg-gradient-dark {
             background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
