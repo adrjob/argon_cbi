@@ -27,7 +27,7 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', function () {
-	return redirect('/crm');
+	return redirect('/role-management');
 })->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name('login');

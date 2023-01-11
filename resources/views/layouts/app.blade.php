@@ -4,33 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-    <title>Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION</title>
-
-    @if (config('app.is_demo'))
-        <meta name="keywords"
-            content="creative tim, updivision, html dashboard, laravel, argon, html css dashboard laravel, laravel argon dashboard laravel, laravel argon dashboard laravel pro, laravel argon dashboard, laravel argon dashboard pro, argon admin, laravel dashboard, laravel dashboard pro, laravel admin, web dashboard, bootstrap 5 dashboard laravel, bootstrap 5, css3 dashboard, bootstrap 5 admin laravel, argon dashboard bootstrap 5 laravel, frontend, responsive bootstrap 5 dashboard, argon dashboard, argon laravel bootstrap 5 dashboard" />
-        <meta name="description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-        <meta itemprop="name" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
-        <meta itemprop="description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-        <meta itemprop="image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
-        <meta name="twitter:card" content="product" />
-        <meta name="twitter:site" content="@creativetim" />
-        <meta name="twitter:title" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
-        <meta name="twitter:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-        <meta name="twitter:creator" content="@creativetim" />
-        <meta name="twitter:image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
-        <meta property="fb:app_id" content="655968634437471" />
-        <meta property="og:title" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.creative-tim.com/live/argon-dashboard-pro-laravel" />
-        <meta property="og:image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
-        <meta property="og:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-    @endif
+    <!-- <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png"> -->
+    <title>Argon CBI</title>
+    
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
@@ -49,6 +26,13 @@
         .gold_bg {
             background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
 	background: linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
+        }
+        .bg-gradient-dark {
+            background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
+        }
+        .form-switch .form-check-input:checked {
+            border-color: #DF9F28;
+            background-color: #DF9F28;;
         }
     </style>
 
@@ -85,8 +69,7 @@
             @endif
 
             <main class="main-content position-relative border-radius-lg">
-                @yield('content')
-                @include('components.fixed-plugin')
+                @yield('content')                
             </main>
         @endif
     @endauth
