@@ -27,7 +27,7 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', function () {
-	return redirect('/role-management');
+	return redirect('/crm');
 })->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name('login');
@@ -57,7 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::controller(RoleController::class)->group(function() {
-        Route::get('/role-management', 'index')->name('role-management');
+        Route::get('/role-management', 'index')->name('role-management');        
         Route::get('/role-management/new', 'create')->name('role-new');
         Route::post('/role-management/new', 'store')->name('role-new.store');
         Route::get('/role-management/edit/{id}', 'edit')->name('role-edit');
