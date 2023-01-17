@@ -53,7 +53,7 @@
                     <!-- Card header -->
                     <div class="card-header d-flex justify-content-between">
                     <h6 class="mb-0">Documents</h6>
-                        <a href="{{ route('program.create') }}" class="btn bg-gradient-dark btn-sm float-end mb-0">Add Document</a>
+                        <a href="{{ route('document.create', $program->id) }}" class="btn bg-gradient-dark btn-sm float-end mb-0">Add Document</a>
                     </div>
                     <div class="px-4" id="alert">
                         @include('components.alert')
@@ -61,10 +61,7 @@
                     <div class="table-responsive">
                         <table class="table table-flush" id="datatable-basic">
                             <thead class="thead-light">
-                                <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Flag
-                                    </th>
+                                <tr>                                    
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Name
                                     </th>
@@ -77,7 +74,28 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                            @foreach ($documents as $document)
+                                    <tr>                                       
+                                        <td class="text-sm font-weight-normal">{{ $document->name }}</td>
+                                        <td class="text-sm font-weight-normal">
+                                            @if($document->type == 0)
+                                            {{ _("Main") }}
+                                            @elseif($document->type == 1)
+                                            {{ _("Spouse") }}
+                                            @endif
+                                        </td>   
+                                        
+                                        <td class="text-sm">
+                                            <span class="d-flex">                                                
+                                                    <a href="{{ route('program.edit', $program->id) }}" class="me-3"
+                                                        data-bs-toggle="tooltip" data-bs-original-title="Edit role">
+                                                        <i class="fas fa-user-edit text-secondary"></i>
+                                                    </a>                                                                                                                                                        
+                                            </span>
+                                        </td>
+                                        
+                                    </tr>
+                                @endforeach    
                             </tbody>
                         </table>
                     </div>
@@ -91,11 +109,17 @@
 
 @push('js')
     <script src="/assets/js/plugins/quill.min.js"></script>
+    <script src="/assets/js/plugins/datatables.js"></script>
     <script>
         if (document.getElementById('editor')) {
             var quill = new Quill('#editor', {
                 theme: 'snow' // Specify theme in configuration
             });
         }
+            
+        const dataTableBasic = new simpleDatatables.DataTable("#datatable-basic", {
+            searchable: true,
+            fixedHeight: true,            
+        });    
     </script>
 @endpush

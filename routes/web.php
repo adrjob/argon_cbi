@@ -15,6 +15,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\DocumentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/user-profile', [ProfileController::class, 'show'])->name('user-profile');
     Route::post('/user-profile', [ProfileController::class, 'update'])->name('user-profile.perform');
+
+    Route::get('/document-create/{id}', [DocumentsController::class, 'create'])->name('document.create');
+    Route::post('/document-store', [DocumentsController::class, 'store'])->name('document.store');
 
     Route::controller(UserController::class)->group(function() {
         Route::get('/user-management', 'index')->name('user-management');

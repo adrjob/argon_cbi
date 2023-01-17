@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Programs;
+use App\Models\Documents;
 use Illuminate\Http\Request;
 
 class ProgramsController extends Controller
@@ -43,7 +44,7 @@ class ProgramsController extends Controller
             'program_id' => $rand_id,      
         ]);        
 
-        return redirect()->back()->with('succes', 'Program succesfully saved');
+        return redirect()->route('programs')->with('succes', 'Program succesfully saved');
     }
 
     /**
@@ -66,7 +67,8 @@ class ProgramsController extends Controller
     public function edit($id)
     {
         $program = Programs::find($id);
-        return view('programs.edit', compact('program'));
+        $documents = Documents::where('program_id', $id)->get();
+        return view('programs.edit', compact('program', 'documents'));
     }
 
     /**

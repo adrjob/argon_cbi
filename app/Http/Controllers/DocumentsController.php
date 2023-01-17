@@ -22,9 +22,9 @@ class DocumentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create(Documents $documents, $id)
+    {        
+        return view('programs.documentcreate', ['id' => $id]);
     }
 
     /**
@@ -35,7 +35,13 @@ class DocumentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $documents = Documents::create([
+            'name' => $request->get('name'),
+            'type' => $request->get('type'),      
+            'program_id' => $request->get('program_id'),      
+        ]);     
+        
+        return redirect()->route('programs')->with('succes', 'Docuement succesfully saved');
     }
 
     /**
