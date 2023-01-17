@@ -63,6 +63,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'flags' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/flags'),
+            'url' => env('APP_URL').'/flags',
+            'visibility' => 'public',
+        ],
+
         'items' => [
             'driver' => 'local',
             'root' => storage_path('app/public/items'),
@@ -87,6 +94,7 @@ return [
         // public_path('storage') => storage_path('app/public'),
         public_path('avatars') => storage_path('app/public/avatars'),
         public_path('items') => storage_path('app/public/items'),
+        public_path('flags') => storage_path('app/public/flags'),
     ],
 
 ];

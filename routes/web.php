@@ -14,6 +14,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ProgramsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,7 @@ Route::post('/reset-password', [ResetPassword::class, 'send'])->middleware('gues
 Route::get('/change-password', [ChangePassword::class, 'show'])->middleware('guest')->name('change-password');
 Route::post('/change-password', [ChangePassword::class, 'update'])->middleware('guest')->name('change.perform');
 
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/user-profile', [ProfileController::class, 'show'])->name('user-profile');
@@ -55,6 +57,15 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/user-management/edit/{id}', 'update')->name('user-edit.update');
         Route::post('/user-delete/{id}', 'destroy')->name('user-destroy');
     });
+
+    Route::controller(ProgramsController::class)->group(function() {
+        Route::get('/programs', 'index')->name('programs');    
+        Route::get('/program/create', 'create')->name('program.create');        
+        Route::post('/program/store', 'store')->name('program.store');        
+        Route::get('/program/edit/{id}', 'edit')->name('program.edit');        
+        Route::post('/program/update/{id}', 'update')->name('program.update');        
+    });
+
 
     Route::controller(RoleController::class)->group(function() {
         Route::get('/role-management', 'index')->name('role-management');        

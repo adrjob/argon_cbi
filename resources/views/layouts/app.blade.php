@@ -4,13 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png"> -->
-    <title>Argon CBI</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/vancis_logo.png">
+    <link rel="icon" type="image/png" href="/assets/img/vancis_logo.png">
+    <title>Vancis Capital</title>
     
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+
     <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -25,6 +27,7 @@
     <style>
         .gold_bg {
             background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
+            color: white;
         }
         .bg-gradient-dark {
             background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
@@ -32,6 +35,11 @@
         .form-switch .form-check-input:checked {
             border-color: #DF9F28;
             background-color: #DF9F28;;
+        }
+        .center {
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto;
         }
     </style>
 

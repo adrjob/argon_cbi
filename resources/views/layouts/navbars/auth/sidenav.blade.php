@@ -6,8 +6,8 @@
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0"
             href="{{ route('dashboards', ['page' => 'default']) }}">
-            <!-- <img src="{{ $logo ?? '/assets/img/logo-ct-dark.png'}}" class="navbar-brand-img h-100" alt="main_logo"> -->
-            <span class="ms-1 font-weight-bold">(Your Logo Here) Argon CBI</span>
+            <img src="{{ $logo ?? '/assets/img/vancis_logo.png'}}" class="navbar-brand-img h-100" alt="main_logo">
+            <span class="ms-1 font-weight-bold">Vancis Capital</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -80,15 +80,43 @@
                 </div> -->
             </li>
 
+
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#laravelExamples" class="nav-link active"
+                <a data-bs-toggle="collapse" href="#programs" class="nav-link"
+                    aria-controls="programs" role="button" aria-expanded="false">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="ni ni-planet" style="color: #DF9F28; font-size: large; font-weight: 500 "></i>                        
+                    </div>
+                    <span class="nav-link-text ms-1">Programs </span>
+                </a>
+                <div class="collapse " id="programs">
+                    <ul class="nav ms-4">
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'programs' ? 'active' : '' }}" href="{{ route('programs') }}">
+                                <span class="sidenav-mini-icon"> L </span>
+                                <span class="sidenav-normal"> List </span>
+                            </a>
+                        </li>  
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'program.create' ? 'active' : '' }}" href="{{ route('program.create') }}">
+                                <span class="sidenav-mini-icon"> C </span>
+                                <span class="sidenav-normal"> Create </span>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#laravelExamples" class="nav-link"
                     aria-controls="laravelExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
-                        <i class="fab fa-laravel" style="color: #f4645f; font-size: large; font-weight: 500 "></i>
+                        <i class="ni ni-settings" style="color: #DF9F28; font-size: large; font-weight: 500 "></i>
+                        <i class="ni ni-air-baloon"></i>
                     </div>
                     <span class="nav-link-text ms-1">Settings </span>
                 </a>
-                <div class="collapse show" id="laravelExamples">
+                <div class="collapse" id="laravelExamples">
                     <ul class="nav ms-4">
                         <li class="nav-item ">
                             <a class="nav-link {{ Route::currentRouteName() == 'user-profile' ? 'active' : '' }}" href="{{ route('user-profile') }}">
@@ -110,26 +138,7 @@
                                 </a>
                             </li>
                         @endcan
-                        <!-- @can('manage-items', auth()->user())
-                            <li class="nav-item ">
-                                <a class="nav-link {{ Route::currentRouteName() == 'category-management' ? 'active' : '' }}" href="{{ route('category-management') }}">
-                                    <span class="sidenav-mini-icon"> C </span>
-                                    <span class="sidenav-normal"> Category Management </span>
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link {{ Route::currentRouteName() == 'tag-management' ? 'active' : '' }}" href="{{ route('tag-management') }}">
-                                    <span class="sidenav-mini-icon"> T </span>
-                                    <span class="sidenav-normal"> Tag Management </span>
-                                </a>
-                            </li>
-                        @endcan
-                        <li class="nav-item ">
-                            <a class="nav-link {{ Route::currentRouteName() == 'item-management' ? 'active' : '' }}" href="{{ route('item-management') }}">
-                                <span class="sidenav-mini-icon"> I </span>
-                                <span class="sidenav-normal"> Items Management </span>
-                            </a>
-                        </li> -->
+                    
                     </ul>
                 </div>
             </li>
