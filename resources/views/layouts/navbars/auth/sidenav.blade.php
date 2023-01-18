@@ -85,7 +85,7 @@
                 <a data-bs-toggle="collapse" href="#programs" class="nav-link"
                     aria-controls="programs" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
-                        <i class="ni ni-planet" style="color: #DF9F28; font-size: large; font-weight: 500 "></i>                        
+                        <i class="ni ni-planet" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
                     </div>
                     <span class="nav-link-text ms-1">Programs </span>
                 </a>
@@ -111,7 +111,7 @@
                 <a data-bs-toggle="collapse" href="#laravelExamples" class="nav-link"
                     aria-controls="laravelExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
-                        <i class="ni ni-settings" style="color: #DF9F28; font-size: large; font-weight: 500 "></i>
+                        <i class="ni ni-settings" style="color: #936a0b; font-size: large; font-weight: 500 "></i>
                         <i class="ni ni-air-baloon"></i>
                     </div>
                     <span class="nav-link-text ms-1">Settings </span>

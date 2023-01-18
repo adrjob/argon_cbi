@@ -26,15 +26,15 @@
 
     <style>
         .gold_bg {
-            background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
+            background: -webkit-linear-gradient(left, #936a0b, #936a0b, #936a0b);    
             color: white;
         }
         .bg-gradient-dark {
-            background: -webkit-linear-gradient(left, #DF9F28, #DF9F28, #DF9F28);    
+            background: -webkit-linear-gradient(left, #936a0b, #936a0b, #936a0b);    
         }
         .form-switch .form-check-input:checked {
-            border-color: #DF9F28;
-            background-color: #DF9F28;;
+            border-color: #936a0b;
+            background-color: #936a0b;;
         }
         .center {
             display: block; 

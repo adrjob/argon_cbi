@@ -8,7 +8,7 @@
                         document.write(new Date().getFullYear())
                     </script>,
                     made by
-                    <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Web3 Evolution</a>                    
+                    <a href="https://www.vanciscapital.com" class="font-weight-bold" target="_blank">Vancis Capital</a>                    
                 </div>
             </div>
             <!-- <div class="col-lg-6">
