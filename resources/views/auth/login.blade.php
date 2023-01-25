@@ -32,11 +32,11 @@
                                 <form role="form" method="POST" action="{{route('login.perform') }}" class="text-start">
                                 @csrf
                                     <div class="mb-3">
-                                        <input type="email" class="form-control" value="{{ old('email') ?? 'test@test.com' }}" placeholder="Email" aria-label="Email" name="email">
+                                        <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="email">
                                         @error('email') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control" placeholder="Password" value="test123"
+                                        <input type="password" class="form-control" placeholder="Password"
                                             aria-label="Password" name="password">
                                             @error('password') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                     </div>
