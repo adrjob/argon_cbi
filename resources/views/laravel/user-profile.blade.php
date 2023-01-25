@@ -2,8 +2,6 @@
 
 @section('content')
 
-@include('layouts.navbars.auth.topnav')
-    
     <div class="container-fluid my-5 py-2">
         <div class="d-flex justify-content-center mb-5">
             <div class="col-lg-9 mt-lg-0 mt-4">
