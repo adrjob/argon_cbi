@@ -24,7 +24,10 @@ class ClientsController extends Controller
 
     public function index2(Clients $clients, $id)
     {
-        $clients = Clients::where('program_id', $id)->get();
+        $authid = auth()->user()->id;
+        $clients = Clients::where('program_id', $id)    
+        ->where('id', $authid)
+        ->get();
         
         return view('clients.index', compact('clients'));        
     }
