@@ -41,7 +41,7 @@ class ImagesController extends Controller
             $client = Clients::find($id);
             $file = $request->file('document');                       
             $filename = $request->get('name')."_".date('mdYhisa').".".$file->getClientOriginalExtension();
-            dd($request->get('name'));
+            
             $images = Images::create([
                 "name" => $filename,
                 "program_id" => $request->get('program_id'),
