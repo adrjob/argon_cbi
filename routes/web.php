@@ -31,7 +31,7 @@ use App\Http\Controllers\ImagesController;
 */
 
 Route::get('/', function () {
-	return redirect('/programs');
+	return redirect('/user-profile');
 })->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name('login');
