@@ -123,7 +123,30 @@
                 </div>
             </li>
 
+            @if(auth()->user()->isAdmin())
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#residency" class="nav-link"
+                    aria-controls="residency" role="button" aria-expanded="false">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="ni ni-single-02" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
+                    </div>
+                    <span class="nav-link-text ms-1">Residency</span>
+                </a>                
+                <div class="collapse " id="residency">
+                    <ul class="nav ms-4">
+                    @foreach($residency as $res)
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'clients' ? 'active' : '' }}" href="{{ route('clients.sub', $res->id) }}">                                
+                                <span class="sidenav-normal"> {{ $res->name }} </span>
+                            </a>
+                        </li>                                                 
+                    @endforeach    
+                    </ul>
+                </div>                
+            </li>
+            @endif
 
+            @can('manage-users', auth()->user())
             <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#programs" class="nav-link"
                     aria-controls="programs" role="button" aria-expanded="false">
@@ -149,6 +172,7 @@
                     </ul>
                 </div>
             </li>
+            
 
             <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#finance" class="nav-link"
@@ -175,6 +199,7 @@
                     </ul>
                 </div>
             </li>
+            @endcan
 
             <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#downloads" class="nav-link"

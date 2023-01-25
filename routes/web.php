@@ -62,6 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/clients/stotre', 'store')->name('clients.store');
         Route::post('clients/update/{id}', 'update')->name('clients.update');
         Route::get('clients/view/{id}', 'show')->name('clients.show');
+        Route::get('clients/sub/{id}', 'index2')->name('clients.sub');
     });
 
     Route::controller(ImagesController::class)->group(function() {

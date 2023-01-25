@@ -22,6 +22,15 @@ class ClientsController extends Controller
         return view('clients.index', ['clients' => $clients->all()]);
     }
 
+    public function index2(Clients $clients, $id)
+    {
+        $clients = Clients::where('program_id', $id)->get();
+        
+        return view('clients.index', compact('clients'));        
+    }
+
+    
+
     /**
      * Show the form for creating a new resource.
      *

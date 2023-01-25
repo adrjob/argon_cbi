@@ -1,3 +1,10 @@
+<?php
+use \App\Models\Programs;
+
+$residency = Programs::where('type', 0)->get();
+$citisenship = Programs::where('type', 1)->get();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
