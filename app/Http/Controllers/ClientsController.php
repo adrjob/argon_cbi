@@ -24,7 +24,7 @@ class ClientsController extends Controller
         if($authroleid == 1) {
         return view('clients.index', ['clients' => $clients->all()]);
         } else {
-            $clients = Clients::where('id', $authid)->get();
+            $clients = Clients::where('sub_agent', $authid)->get();
             return view('clients.index', compact('clients'));     
         }
     }
@@ -94,7 +94,8 @@ class ClientsController extends Controller
         $clients = Clients::find($id);
         $documents = Documents::with(['images' => function ($query) {
             $clients = Clients::find(request()->id);
-            $query->where('program_id', 'like', $clients->program_id);
+            $query->where('program_id', 'like', $clients->program_id)
+                  ->where('client_id', 'like', $clients->id);
         }])->get();
         
         $images = Images::where('client_id', $clients->id)->get();

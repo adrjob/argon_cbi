@@ -4,7 +4,7 @@
 
     <div class="container-fluid my-5 py-2">
         <div class="d-flex justify-content-center mb-5">
-            <div class="col-lg-9 mt-lg-0 mt-4">
+            <div class="col-lg-12 mt-lg-0 mt-4">
 
                 <!-- Card Basic Info -->
                 <div class="card mt-4" id="basic-info">
@@ -174,7 +174,7 @@
 
                             <div class="d-flex justify-content-end mt-4">
                                 <a href="{{ route('user-management') }}" class="btn btn-light m-0">Back</a>
-                                <button type="submit" class="btn bg-gradient-primary m-0 ms-2">Save</button>
+                                <button type="submit" class="btn gold_bg m-0 ms-2">Save</button>
                             </div>
                         </form>
                     </div>

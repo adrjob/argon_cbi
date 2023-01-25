@@ -45,10 +45,10 @@
                                           {{ $document->name }}                                                                                      
                                         </td>
                                         <td class="text-sm text-right" width='10%'>                                          
-                                          @if($document->images and $document->images['doc_id'] == $document->id)
+                                          @if($document->images and $document->images['doc_id'] == $document->id)                                          
                                           <a href="{{ asset('/client/',).'/'.$clients->id.'/'. $document->images['name'] }}" target="_blank">
                                           <i class="fas fa-eye text-secondary"></i> 
-                                          </a>                                           
+                                          </a>                                                                                     
                                           @else
                                           <form method="POST" class="doc{{ $document->id }}" action="{{ route('image.store', $clients->id) }}" id="image{{$document->id}}" enctype="multipart/form-data">
                                             @csrf
