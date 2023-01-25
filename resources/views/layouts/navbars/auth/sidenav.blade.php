@@ -154,7 +154,7 @@
                 </a>                
                 <div class="collapse " id="residency">
                     <ul class="nav ms-4">
-                    @foreach($citzenship as $cit)
+                    @foreach($citisenship as $cit)
                         <li class="nav-item ">
                             <a class="nav-link {{ Route::currentRouteName() == 'clients' ? 'active' : '' }}" href="{{ route('clients.sub', $cit->id) }}">                                
                                 <span class="sidenav-normal"> {{ $cit->name }} </span>
