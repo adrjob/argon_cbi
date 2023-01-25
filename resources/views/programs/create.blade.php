@@ -26,8 +26,7 @@
                                 </div>
                                 <div class="col-6">
                                 <label class="form-label">Type</label>
-                                    <select class="form-control" name="type" id="choices-gender" require>                                        
-                                        <option>Choose</option>
+                                    <select class="form-control" name="type" id="choices-gender" require>                                                                                
                                         <option value="0">Residency</option>
                                         <option value="1">Citizenship</option>
                                 </div>                                

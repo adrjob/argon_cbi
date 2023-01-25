@@ -30,8 +30,10 @@ class ClientsController extends Controller
     public function create()
     {
         $roles = Role::all();
-        $programs = Programs::all();
-        return view('clients.create', compact('roles', 'programs'));
+        $residency = Programs::where('type', 0)->get();
+        $citizenship = Programs::where('type', 1)->get();
+        
+        return view('clients.create', compact('roles', 'residency', 'citizenship'));
     }
 
     /**

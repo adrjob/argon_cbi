@@ -18,9 +18,17 @@
                                 <label for="program">Program</label>
                                 <div class="form-group">
                                     <select class="form-control" id="program" name="program_id">
-                                        @foreach($programs as $program)
-                                            <option value="{{ $program->id }}">{{ $program->name }}</option>    
+                                        Residency
+                                    <optgroup label="Residency">
+                                        @foreach($residency as $res)
+                                            <option value="{{ $res->id }}">{{ $res->name }}</option>    
                                         @endforeach
+                                    </optgroup>
+                                    <optgroup label="Citizenship">
+                                        @foreach($citizenship as $cit)
+                                            <option value="{{ $cit->id }}">{{ $cit->name }}</option>    
+                                        @endforeach
+                                    </optgroup>                                                                                
                                     </select>
                                 </div>
                                 </div>                                                             
