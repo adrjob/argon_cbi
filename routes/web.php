@@ -16,6 +16,8 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProgramsController;
 use App\Http\Controllers\DocumentsController;
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\ImagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +31,7 @@ use App\Http\Controllers\DocumentsController;
 */
 
 Route::get('/', function () {
-	return redirect('/crm');
+	return redirect('/programs');
 })->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name('login');
@@ -52,6 +54,19 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/document-create/{id}', [DocumentsController::class, 'create'])->name('document.create');
     Route::post('/document-store', [DocumentsController::class, 'store'])->name('document.store');
+
+    Route::controller(ClientsController::class)->group(function() {
+        Route::get('/clients', 'index')->name('clients');
+        Route::get('/clients/create', 'create')->name('clients.create');
+        Route::get('/clients/edit/{id}', 'edit')->name('clients.edit');
+        Route::post('/clients/stotre', 'store')->name('clients.store');
+        Route::post('clients/update/{id}', 'update')->name('clients.update');
+        Route::get('clients/view/{id}', 'show')->name('clients.show');
+    });
+
+    Route::controller(ImagesController::class)->group(function() {
+        Route::post('/image/stotre/{id}', 'store')->name('image.store');        
+    });
 
     Route::controller(UserController::class)->group(function() {
         Route::get('/user-management', 'index')->name('user-management');

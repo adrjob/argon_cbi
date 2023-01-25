@@ -16,9 +16,11 @@
     <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
+    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju/dt-1.11.5/datatables.min.css"/> --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/ju/dt-1.11.5/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 
     <!-- CSS Files -->
@@ -41,13 +43,26 @@
             margin-left: auto; 
             margin-right: auto;
         }
+        .card {
+            border-radius: 0px;
+        }
+
+        .dataTable-wrapper .dataTable-bottom .dataTable-pagination .dataTable-pagination-list .active a {
+    background: transparent;
+    background-color: #936a0b;
+    box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    color: #fff;
+    border: none;
+    border-radius: 50% !important;
+}
+
     </style>
 
     @stack('css')
 
 </head>
 
-<body class="g-sidenav-show bg-gray-100 {{ $class ?? '' }}">
+<body class="g-sidenav-show bg-gray-200 {{ $class ?? '' }}">
     @guest
         @yield('content')
     @endguest

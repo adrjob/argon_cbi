@@ -46,7 +46,7 @@
                                         <td class="text-sm font-weight-normal">
                                             <span class="my-2 text-xs">
                                                 <img src="{{ $user->avatarUrl() }}" alt="bruce"
-                                                    class="border-radius-lg shadow-sm height-100 w-auto">
+                                                    class="border-radius-lg shadow-sm" style='width: 50px; height: 50px'>
                                             </span>
                                         </td>
                                         <td class="text-sm font-weight-normal">{{ $user->firstname }}

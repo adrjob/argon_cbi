@@ -1,54 +1,32 @@
-<footer class="footer py-5">
+<footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mb-4 mx-auto text-center">
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Company
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    About Us
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Team
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Products
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Blog
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Pricing
-                </a>
-            </div>
+        <div class="row">            
             <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-dribbble"></span>
+                <a href="https://www.facebook.com/vanciscapital" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-facebook"></span>
                 </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-twitter"></span>
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+                <a href="https://www.instagram.com/vanciscapital/" target="_blank" class="text-secondary me-xl-4 me-4">
                     <span class="text-lg fab fa-instagram"></span>
                 </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-pinterest"></span>
+                <a href="https://twitter.com/vanciscapital" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-twitter"></span>
+                </a>                
+                <a href="https://www.youtube.com/channel/UCqcFFHlWg9uFKzuPmIU51kQ" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-youtube"></span>
                 </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-github"></span>
+                <a href="https://www.linkedin.com/company/vanciscapital" target="_blank" class="text-secondary me-xl-4 me-4">
+                    <span class="text-lg fab fa-linkedin"></span>
                 </a>
             </div>
         </div>
         <div class="row">
-            <div class="col-8 mx-auto text-center mt-1">
-                <p class="mb-0 text-secondary">
+            <div class="col-8 mx-auto text-center">
+                <p class="mb-0 fab" style='color: #936a0b'>
                     Copyright ©
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                    &
-                    <a href="https://www.updivision.com" class="font-weight-bold" target="_blank">UPDIVISION</a>
+                    <a href="https://www.vanciscapital.com" class="font-weight-bold fab" target="_blank">Vancis Capital</a>                    
                 </p>
             </div>
         </div>

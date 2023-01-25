@@ -1,16 +1,33 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-2
-    {{ $bg ?? ''}} {{ $box ?? ''}}"
-    id="sidenav-main">
+<link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs fixed-start navbar-dark
+    {{ $box ?? ''}}"
+    id="sidenav-main" style='background-color: #212529'>
+    <style>
+        aside a {
+            color: white !important;
+        }
+        aside hr {
+            border-top: 1px solid #936a0b;
+
+        }
+        .navbar-brand-img {
+            margin-left: 30%;  
+            margin-top: -15px;
+            max-height: 4rem !important;
+            
+        }
+    </style>
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0"
             href="{{ route('dashboards', ['page' => 'default']) }}">
-            <img src="{{ $logo ?? '/assets/img/vancis_logo.png'}}" class="navbar-brand-img h-100" alt="main_logo">
-            <span class="ms-1 font-weight-bold">Vancis Capital</span>
+            <img src="{{ $logo ?? '/assets/img/logos/vancis-logo.png'}}" class="navbar-brand-img h-100" alt="main_logo">
+            <!-- <span class="ms-1 font-weight-bold">Vancis Capital</span> -->
         </a>
     </div>
-    <hr class="horizontal dark mt-0">
+    <hr class="horizontal mt-0">
     <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -80,12 +97,38 @@
                 </div> -->
             </li>
 
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#clients" class="nav-link"
+                    aria-controls="clients" role="button" aria-expanded="false">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="ni ni-single-02" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
+                    </div>
+                    <span class="nav-link-text ms-1">Clients</span>
+                </a>
+                <div class="collapse " id="clients">
+                    <ul class="nav ms-4">
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'clients' ? 'active' : '' }}" href="{{ route('clients') }}">
+                                <span class="sidenav-mini-icon"> L </span>
+                                <span class="sidenav-normal"> List </span>
+                            </a>
+                        </li>  
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'clients.create' ? 'active' : '' }}" href="{{ route('clients.create') }}">
+                                <span class="sidenav-mini-icon"> C </span>
+                                <span class="sidenav-normal"> Create </span>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+            </li>
+
 
             <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#programs" class="nav-link"
                     aria-controls="programs" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
-                        <i class="ni ni-planet" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
+                        <i class="ni ni-world-2" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
                     </div>
                     <span class="nav-link-text ms-1">Programs </span>
                 </a>
@@ -108,11 +151,53 @@
             </li>
 
             <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#finance" class="nav-link"
+                    aria-controls="finance" role="button" aria-expanded="false">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="ni ni-money-coins" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
+                    </div>
+                    <span class="nav-link-text ms-1">Finance (Work with Sandeep)</span>
+                </a>
+                <div class="collapse " id="finance">
+                    <ul class="nav ms-4">
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'programs' ? 'active' : '' }}" href="{{ route('programs') }}">
+                                <span class="sidenav-mini-icon"> L </span>
+                                <span class="sidenav-normal">Invoices</span>
+                            </a>
+                        </li>  
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'program.create' ? 'active' : '' }}" href="{{ route('program.create') }}">
+                                <span class="sidenav-mini-icon"> C </span>
+                                <span class="sidenav-normal">Receipts</span>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#downloads" class="nav-link"
+                    aria-controls="downloads" role="button" aria-expanded="false">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="ni ni-paper-diploma" style="color: #936a0b; font-size: large; font-weight: 500 "></i>
+                        
+                    </div>
+                    <span class="nav-link-text ms-1">Downloads</span>
+                </a>
+                <div class="collapse" id="downloads">
+                    <ul class="nav ms-4">
+                        
+                    
+                    </ul>
+                </div>
+            </li>            
+
+            <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#laravelExamples" class="nav-link"
                     aria-controls="laravelExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
-                        <i class="ni ni-settings" style="color: #936a0b; font-size: large; font-weight: 500 "></i>
-                        <i class="ni ni-air-baloon"></i>
+                        <i class="ni ni-settings" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
                     </div>
                     <span class="nav-link-text ms-1">Settings </span>
                 </a>
@@ -142,6 +227,24 @@
                     </ul>
                 </div>
             </li>
+
+            <li class="nav-item">
+            <form role="form" method="post" action="{{ route('logout') }}" id="logout-form">
+                @csrf
+                <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                        class="nav-link" style='color: #936a0b'>                    
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="fa fa-times-circle me-sm-1" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
+                        
+
+                    </div>
+                    <span class="nav-link-text ms-1">Log out</span>                
+                </a>  
+                </form>           
+            </li>  
+
+            
 
             <!-- <li class="nav-item mt-3">
                 <h6 class="ps-4  ms-2 text-uppercase text-xs font-weight-bolder opacity-6">PAGES</h6>

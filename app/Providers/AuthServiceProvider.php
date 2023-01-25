@@ -14,7 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         Tags::class => TagPolicy::class,
-        User::class => UserPolicy::class,
+        // User::class => UserPolicy::class,
         Item::class => ItemPolicy::class,
         Role::class => RolePolicy::class,
         Category::class => CategoryPolicy::class,
@@ -31,7 +31,7 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('manage-items', 'App\Policies\UserPolicy@manageItems');
 
-        Gate::define('manage-users', 'App\Policies\UserPolicy@manageUsers');
+        // Gate::define('manage-users', 'App\Policies\UserPolicy@manageUsers');
 
         Gate::define('manage-users', 'App\Policies\UserPolicy@updatecategory');
 

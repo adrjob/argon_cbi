@@ -41,7 +41,10 @@ class DocumentsController extends Controller
             'program_id' => $request->get('program_id'),      
         ]);     
         
-        return redirect()->route('programs')->with('succes', 'Docuement succesfully saved');
+        $tid = $request->get('program_id');
+
+
+        return redirect()->route('program.edit',$tid)->with('succes', 'Docuement succesfully saved');
     }
 
     /**

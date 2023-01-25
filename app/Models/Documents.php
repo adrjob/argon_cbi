@@ -10,4 +10,9 @@ class Documents extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'type', 'program_id'];
+
+    public function images()
+    {
+        return $this->hasOne(Images::class, 'doc_id', 'id');
+    }
 }
