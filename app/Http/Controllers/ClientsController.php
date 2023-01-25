@@ -96,7 +96,7 @@ class ClientsController extends Controller
             $clients = Clients::find(request()->id);
             $query->where('program_id', 'like', $clients->program_id)
                   ->where('client_id', 'like', $clients->id);
-        }])->get();
+        }])->where('program_id', $clients->program_id)->get();
         
         $images = Images::where('client_id', $clients->id)->get();
         // $documents = Documents::where('program_id', $clients->program_id)->get();
