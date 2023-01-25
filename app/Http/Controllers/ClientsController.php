@@ -19,7 +19,14 @@ class ClientsController extends Controller
      */
     public function index(Clients $clients)
     {
+        $authroleid = auth()->user()->role_id;
+        $authid = auth()->user()->id;
+        if($authroleid == 1) {
         return view('clients.index', ['clients' => $clients->all()]);
+        } else {
+            $clients = Clients::where('id', $authid)->get();
+            return view('clients.index', compact('clients'));     
+        }
     }
 
     public function index2(Clients $clients, $id)
