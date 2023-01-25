@@ -19,6 +19,7 @@
         "sass-loader": "^12.6.0"
     },
     "dependencies": {
-        "perfect-scrollbar": "^1.5.5"
+        "perfect-scrollbar": "^1.5.5",
+        "pickerjs": "^1.2.1"
     }
 }

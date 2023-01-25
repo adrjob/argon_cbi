@@ -156,7 +156,7 @@
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
                         <i class="ni ni-money-coins" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
                     </div>
-                    <span class="nav-link-text ms-1">Finance (Work with Sandeep)</span>
+                    <span class="nav-link-text ms-1">Finance(Work with Sandeep)</span>
                 </a>
                 <div class="collapse " id="finance">
                     <ul class="nav ms-4">

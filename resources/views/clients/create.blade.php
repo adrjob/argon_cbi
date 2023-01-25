@@ -102,3 +102,12 @@
     </div>
 @endsection
 
+@push('js')
+<script type="text/javascript" src="path/to/file/picker.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#your-selector').picker();
+    });
+</script>
+@endpush
+
