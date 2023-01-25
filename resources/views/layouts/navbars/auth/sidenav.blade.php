@@ -123,7 +123,7 @@
                 </div>
             </li>
 
-            @if(auth()->user()->isAdmin())
+            @if(auth()->user()->isMember())
             <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#residency" class="nav-link"
                     aria-controls="residency" role="button" aria-expanded="false">
@@ -138,6 +138,26 @@
                         <li class="nav-item ">
                             <a class="nav-link {{ Route::currentRouteName() == 'clients' ? 'active' : '' }}" href="{{ route('clients.sub', $res->id) }}">                                
                                 <span class="sidenav-normal"> {{ $res->name }} </span>
+                            </a>
+                        </li>                                                 
+                    @endforeach    
+                    </ul>
+                </div>                
+            </li>
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#residency" class="nav-link"
+                    aria-controls="residency" role="button" aria-expanded="false">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
+                        <i class="ni ni-single-02" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
+                    </div>
+                    <span class="nav-link-text ms-1">Citizenship</span>
+                </a>                
+                <div class="collapse " id="residency">
+                    <ul class="nav ms-4">
+                    @foreach($citzenship as $cit)
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'clients' ? 'active' : '' }}" href="{{ route('clients.sub', $cit->id) }}">                                
+                                <span class="sidenav-normal"> {{ $cit->name }} </span>
                             </a>
                         </li>                                                 
                     @endforeach    
