@@ -145,14 +145,14 @@
                 </div>                
             </li>
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#residency" class="nav-link"
-                    aria-controls="residency" role="button" aria-expanded="false">
+                <a data-bs-toggle="collapse" href="#citizenship" class="nav-link"
+                    aria-controls="citizenship" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-end justify-content-center">
                         <i class="ni ni-single-02" style="color: #936a0b; font-size: large; font-weight: 500 "></i>                        
                     </div>
                     <span class="nav-link-text ms-1">Citizenship</span>
                 </a>                
-                <div class="collapse " id="residency">
+                <div class="collapse " id="citizenship">
                     <ul class="nav ms-4">
                     @foreach($citisenship as $cit)
                         <li class="nav-item ">
